@@ -63,9 +63,9 @@ class ComputerController extends Controller
      * @param  \App\Models\computer  $computer
      * @return \Illuminate\Http\Response
      */
-    public function edit(computer $computer)
+    public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -77,13 +77,11 @@ class ComputerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $coms = Computer::find($id);
+        $coms= Computer::find($id);
+        $coms->update($request->only('item','manufacturer','description','price','quantity'));
 
-        $coms->update($request->all());
-
-        return response()->json(['updated'=>200]);
+        return response()->json(['updated'=>201]);
     }
-
     /**
      * Remove the specified resource from storage.
      *

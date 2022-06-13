@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/computer-items',[ComputerController::class,'index']);
-Route::get('/computer-items/{computer}',[ComputerController::class,'show']);
-Route::post('/computer-items/store',[ComputerController::class,'store']);
-Route::put('/computer-items/edit/{id}',[ComputerController::class,'update']);
-Route::delete('/computer-items/delete/{id}',[ComputerController::class,'destroy']);
+Route::get('/computer',[ComputerController::class,'index']);
+Route::get('/computer/{computer}',[ComputerController::class,'show']);
+Route::post('/computer/store',[ComputerController::class,'store']);
+Route::put('/computer/edit/{id}',[ComputerController::class,'update']);
+Route::delete('/computer/delete/{id}',[ComputerController::class,'destroy']);

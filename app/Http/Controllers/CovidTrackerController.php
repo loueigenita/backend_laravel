@@ -14,8 +14,7 @@ class CovidTrackerController extends Controller
      */
     public function index()
     {
-
-        return response()->json( CovidTracker::orderBy('id','DESC')->get());
+        return response()->json(CovidTracker::orderBy('id','DESC')->get());
     }
 
     /**
